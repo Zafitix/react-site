@@ -1,0 +1,120 @@
+.main__offers {
+  padding: 3rem 6rem 0 6rem;
+}
+
+.main__offers-content {
+  padding-top: 150px;
+  color: #fff;
+}
+
+.main__offers-content .carousel__control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel__control .title {
+  font-size: 16px;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.main__offers-content .carousel__control .arrows {
+  display: flex;
+  align-items: center;
+}
+
+.main__offers-content .carousel {
+  padding-top: 20px;
+}
+
+.main__offers-content .swiper-slide {
+  margin: 0 .7rem 0 0;
+  background-color: #212134;
+  border-radius: 15px;
+  width: 130px;
+  height: auto;
+  padding: 12px 12px 0 12px;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+.main__offers-content .swiper-slide {
+  cursor: pointer;
+}
+
+
+.main__offers-content .carousel .offer__img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+.main__offers-content .carousel h1 {
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top: 10px;
+}
+
+.main__offers-content .carousel p {
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top: 4px;
+}
+
+.main__offers-content .carousel .offer__bottom {
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 12px;
+}
+
+.main__offers-content .carousel .offer__bottom-left {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+}
+
+.main__offers-content .carousel .offer__bottom-left span {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.main__offers-content .carousel .offer__bottom-right {
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+}
+
+.main__offers-content .carousel .offer__bottom-right span {
+  font-size: 12px;
+  font-weight: 800;
+  background-color: #62a87c;
+  padding: 2px 5px;
+  border-radius: 8px;
+}
+
+
+
+
+
+
+

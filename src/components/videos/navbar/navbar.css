@@ -1,0 +1,468 @@
+/* Styles pour la navbar */
+
+
+* {
+    font-family: var(--font-family);
+}
+
+.navbar__flex {
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+}
+
+.main__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1d1e30;
+    padding: .4rem 6rem;
+    height: 69px;
+    width: 100%;
+}
+
+.history {
+    margin-top: 69px;
+    position: fixed;
+    z-index: 100;
+}
+
+.main__navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main__navbar-links_logo {
+    margin-right: 2rem;
+}
+
+.main__navbar-links_logo img {
+    width: 150px;
+    height: auto;
+}
+
+.main__navbar-links_logo img:hover {
+    cursor: pointer;
+}
+
+.main__navbar-links_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.main__navbar-sign {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.main__navbar-links_container p.link,
+.main__navbar-menu_container p.signin {
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.main__navbar-sign p.signin {
+    padding: 1rem 2rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    margin: 0 1rem;
+    cursor: pointer;
+
+}
+
+.main__navbar-sign button,
+.main__navbar-menu_container button {
+    padding: .8rem 1.1rem;
+    color: #fff;
+    background: #ff4820;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.main__navbar-menu {
+    margin-left: 1rem;
+
+
+    display: none;
+    position: relative;
+}
+
+.main__navbar-menu svg {
+    cursor: pointer;
+}
+
+.main__navbar-menu_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    text-align: end;
+    background: var(--color-secondary);
+    padding: 2rem;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    margin-top: 1rem;
+    min-width: 210px;
+    border-radius: 5px;
+    box-shadow: 0 0 5 rgba(0, 0, 0, 0.2);
+}
+
+.main__navbar-menu_container p {
+    margin: 1rem 0;
+}
+
+.main__navbar-menu_container-links-sign {
+    display: none;
+}
+
+@media screen and (max-width: 1050px) {
+    .main__navbar-links_container {
+        display: none;
+    }
+
+    .main__navbar-menu {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .main__navbar {
+        padding: .4rem 4rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .main__navbar {
+        padding: 1.3rem 2rem;
+    }
+
+    .main__navbar-sign {
+        display: none;
+    }
+
+    .main__navbar-menu_container {
+        top: 20px;
+    }
+
+    .main__navbar-menu_container-links-sign {
+        display: block;
+    }
+}
+
+
+
+
+
+/* Styles pour les popups login register */
+
+
+.main__navbar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 520px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    font-size: 2em;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.form-box {
+    width: 100%;
+    height: 50px;
+    padding: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .form-box.login {
+    transform: translateX(0);
+  }
+  
+  .form-box.register {
+    transform: translateX(100%);
+  }
+  
+  .form-box h2 {
+      font-size: 2em;
+      color: #fff;
+  }
+  
+  .input-box {
+      position: relative;
+      width: 100%;
+      height: 50px;
+      border-bottom: 2px solid #fff;
+      margin: 30px 0;
+  }
+  
+  .input-box label {
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+      font-size: 1em;
+      color: #fff;
+      font-weight: 500;
+      pointer-events: none;
+      transition: .5s;
+  }
+  
+  .input-box input:focus~label,
+  .input-box input:valid~label {
+      top: -5px;
+  }
+  
+  .input-box input {
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 1em;
+      color: #fff;
+      font-weight: 600;
+      padding: 0 35px 0 5px;
+  }
+  
+  .input-box .icon {
+      position: absolute;
+      right: 8px;
+      font-size: 1.2em;
+      color: #fff;
+      line-height: 57px;
+  }
+  
+  .remember-forgot {
+      font-size: .9em;
+      color: #fff;
+      font-weight: 500;
+      margin: -15px 0 15px;
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .remember-forgot label input {
+      accent-color: #fff;
+      margin-right: 3px;
+  }
+  
+  .remember-forgot a {
+      color: #fff;
+      text-decoration: none;
+  }
+  
+  .remember-forgot a:hover {
+      text-decoration: underline;
+  }
+  
+  .btn {
+      width: 100%;
+      height: 45px;
+      background: #fff;
+      border: none;
+      outline: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+      color: #000;
+      font-weight: 500;
+  }
+  
+  .login-register {
+      font-size: .9em;
+      color: #fff;
+      text-align: center;
+      font-weight: 500;
+      margin: 25px 0 10px;
+  }
+  
+  .login-register p a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+  }
+  
+  .login-register p a:hover {
+      text-decoration: underline;
+  }
+  
+  .conditions {
+      color: #fff;
+      font-size: .6em;
+      margin-top: 30px;
+  }
+
+
+
+
+.main__navbar-sign .user-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 295px;
+}
+
+
+.main__navbar-sign .user-bal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 140px;
+    padding: 8px 23px 8px 23px;
+    border-radius: 4px;
+    background-color: #2f3043;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.user-container .currency {
+    width: 20px;
+}
+
+
+.main__navbar-sign .user-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 140px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #2f3043;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.main__navbar-sign .user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main__navbar-sign .profile-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.main__navbar-sign .username {
+  color: #fff;
+}
+
+.main__navbar-sign .arrow-icon {
+  margin-left: auto;
+}
+
+/* Styles pour le menu déroulant */
+.dropdown-menu {
+  position: absolute;
+  top: 70px; /* Ajuster la valeur pour positionner le menu correctement */
+  right: 0;
+  right: 6rem;
+  background-color: #33334d;
+  width: 220px;
+  border-radius: 4px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 100000;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dropdown-menu p {
+  color: #fff;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.dropdown-menu button {
+    padding: 0.5rem 2rem;
+    color: #fff;
+    background: #ff4820;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+    background: red;
+}
+
+.dropdown-menu p:hover {
+  background-color: #555;
+}
+  

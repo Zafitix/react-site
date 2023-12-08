@@ -1,0 +1,33 @@
+.main__adduser {
+    background-color: var(--color-first);
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.main__adduser-content form {
+    background-color: red;
+    width: 500px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.main__adduser-content__input {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__adduser-content__input input {
+    padding: 7px;
+}
+
+form .adduser-btn {
+    font-size: 20px;
+    padding: 7px 15px;
+    border: none;
+    color: #fff;
+    background-color: green;
+    border-radius: 5px;
+}

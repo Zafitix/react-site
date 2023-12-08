@@ -1,0 +1,31 @@
+.main__brand {
+    background-color: var(--color-secondary);
+    font-size: 1.7rem;
+}
+
+.main__brand h2{
+    text-align: center;
+    color: #fff;
+}
+
+.main__brand--image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__brand--image div {
+    flex: 1;
+    max-width: 200px;
+    min-width: 170px;
+    margin: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__brand--image div img {
+    width: 13rem;
+}

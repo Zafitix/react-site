@@ -1,0 +1,89 @@
+.main__offerwalls {
+  padding: 100px 6rem 0 6rem;
+  color: #fff;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.main__offerwalls .title {
+  font-size: 16px;
+}
+
+.main__offerwalls .row {
+  display: grid;
+  padding-top: 20px;
+}
+
+
+@media (min-width: 750px) {
+  .main__offerwalls .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1050px) {
+  .main__offerwalls .row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1430px) {
+  .main__offerwalls .row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.main__offerwalls .offerwall {
+  display: flex;
+  padding: 1rem;
+  margin: 0 10px 10px 0;
+  background-color: #212134;
+  padding: 20px 0 20px 0;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  height: 100px;
+}
+
+.main__offerwalls .offerwall {
+  cursor: pointer;
+}
+
+.main__offerwalls .offerwall img {
+  width: 50px;
+  margin-right: 15px;
+}
+
+.main__offerwalls .offerwall .infos {
+  margin-left: 15px;
+}
+
+.main__offerwalls .offerwall h2 {
+  font-size: 20px;
+}
+
+.main__offerwalls .offerwall .rating {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.main__offerwalls .rating img {
+  width: 18px;
+  margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
