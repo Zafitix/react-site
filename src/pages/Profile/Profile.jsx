@@ -96,7 +96,7 @@ const Profile = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8081/api/userInfo")
+      .get("http://188.213.25.184:8081/api/userInfo")
       .then((res) => {
         if (res.data.id) {
           // Vérification si les données de l'utilisateur sont présentes

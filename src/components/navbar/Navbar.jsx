@@ -24,7 +24,7 @@ const Signup = ({ onCloseSignupForm }) => {
   axios.defaults.withCredentials = true;
   const handleRegisterSubmit = (event) => {
     event.preventDefault();
-    axios.post('http://localhost:8081/register', registerValues)
+    axios.post('http://188.213.25.184:8081/register', registerValues)
     .then(res => {
       if(res.data.Status === "Success") {
         alert("Successful registered !")
@@ -47,7 +47,7 @@ const Signup = ({ onCloseSignupForm }) => {
 
   const handleLoginSubmit = (event) => {
     event.preventDefault();
-    axios.post('http://localhost:8081/login', loginValues)
+    axios.post('http://188.213.25.184:8081/login', loginValues)
     .then(res => {
       if(res.data.Status === "Success") {
         navigate('/earn');
@@ -149,7 +149,7 @@ const Signin = ({ onCloseSigninForm }) => {
   axios.defaults.withCredentials = true;
   const handleRegisterSubmit = (event) => {
     event.preventDefault();
-    axios.post('http://localhost:8081/register', registerValues)
+    axios.post('http://188.213.25.184:8081/register', registerValues)
     .then(res => {
       if(res.data.Status === "Success") {
         alert("Successful registered !")
@@ -171,7 +171,7 @@ const Signin = ({ onCloseSigninForm }) => {
 
   const handleLoginSubmit = (event) => {
     event.preventDefault();
-    axios.post('http://localhost:8081/login', loginValues)
+    axios.post('http://188.213.25.184:8081/login', loginValues)
     .then(res => {
       if(res.data.Status === "Success") {
         navigate('/earn');
@@ -284,7 +284,7 @@ const Navbar = () => {
   };
 
   const handleDelete = () => {
-    axios.get('http://localhost:8081/logout')
+    axios.get('http://188.213.25.184:8081/logout')
     .then(res => {
       window.location.reload();
     }).catch(err => console.log(err));
@@ -292,7 +292,7 @@ const Navbar = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8081/api/userInfo")
+      .get("http://188.213.25.184:8081/api/userInfo")
       .then((res) => {
         if (res.data.id) {
           // Vérification si les données de l'utilisateur sont présentes

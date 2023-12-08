@@ -12,15 +12,15 @@ const Owner = () => {
     const navigate = useNavigate();
 
     useEffect(()=> {
-        axios.get('http://localhost:8081/api/crudInfo')
+        axios.get('http://188.213.25.184:8081/api/crudInfo')
         .then(res => setStudent(res.data))
         .catch(err => console.log(err));
     }, [])
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete('http://localhost:8081/api/deleteuser/'+id)
-            console.log('http://localhost:8081/api/deleteuser/'+id)
+            await axios.delete('http://188.213.25.184:8081/api/deleteuser/'+id)
+            console.log('http://188.213.25.184:8081/api/deleteuser/'+id)
             window.location.reload()
         }catch(err) {
             console.log(err);

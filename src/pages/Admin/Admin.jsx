@@ -15,11 +15,11 @@ const Admin = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:8081')
+    axios.get('http://188.213.25.184:8081')
     .then(res => {
       if(res.data.Status === "Success") {
         setAuth(true);
-        axios.get("http://localhost:8081/api/userInfo")
+        axios.get("http://188.213.25.184:8081/api/userInfo")
         .then((res) => {
             if (res.data.id) {
                 setUserInfo(res.data);

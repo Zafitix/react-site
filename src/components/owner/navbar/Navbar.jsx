@@ -19,7 +19,7 @@ const Navbar = () => {
   
 	useEffect(() => {
 	  axios
-		.get("http://localhost:8081/api/userInfo")
+		.get("http://188.213.25.184:8081/api/userInfo")
 		.then((res) => {
 		  if (res.data.id) {
 			setUserInfo(res.data); // Stockage des informations utilisateur
@@ -31,7 +31,7 @@ const Navbar = () => {
 	}, []);
 
 	const handleDelete = () => {
-		axios.get('http://localhost:8081/logout')
+		axios.get('http://188.213.25.184:8081/logout')
 		.then(res => {
 		  window.location.reload();
 		}).catch(err => console.log(err));

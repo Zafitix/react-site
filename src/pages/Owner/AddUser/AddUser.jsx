@@ -31,7 +31,7 @@ const AddUser = () => {
             return;
         }
         
-        axios.post('http://localhost:8081/api/adduser', {name, email, password, balance, pending, xp, level, role, banned, ip, join, earnings, withdrawn, offers, referals})
+        axios.post('http://188.213.25.184:8081/api/adduser', {name, email, password, balance, pending, xp, level, role, banned, ip, join, earnings, withdrawn, offers, referals})
         .then(res => {
             console.log(res);
             navigate('/owner/users');

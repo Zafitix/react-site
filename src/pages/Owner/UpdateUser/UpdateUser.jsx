@@ -11,7 +11,7 @@ const UpdateUser = () => {
     const {id} = useParams();
 
     useEffect(()=> {
-        axios.get('http://localhost:8081/api/crudInfo')
+        axios.get('http://188.213.25.184:8081/api/crudInfo')
         .then(res => setData(res.data[id-1]))
         .catch(err => console.log(err));
     }, [])
@@ -35,7 +35,7 @@ const UpdateUser = () => {
     function handleSubmit(event) {
         event.preventDefault();
 
-        axios.put('http://localhost:8081/api/updateuser/'+id, updatedUserData)
+        axios.put('http://188.213.25.184:8081/api/updateuser/'+id, updatedUserData)
         .then(res => {
             console.log(res);
             navigate('/owner/users');
